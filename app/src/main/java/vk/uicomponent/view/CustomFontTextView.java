@@ -9,7 +9,6 @@ import android.util.Log;
 import vk.uicomponent.R;
 
 public class CustomFontTextView extends android.support.v7.widget.AppCompatTextView {
-    private static final String TAG = "TextView";
 
     public CustomFontTextView(Context context) {
         super(context);
@@ -37,7 +36,6 @@ public class CustomFontTextView extends android.support.v7.widget.AppCompatTextV
         try {
         tf = Typeface.createFromAsset(ctx.getAssets(), asset);  
         } catch (Exception e) {
-            Log.e(TAG, "Could not get typeface: "+e.getMessage());
             return false;
         }
         setTypeface(tf);
