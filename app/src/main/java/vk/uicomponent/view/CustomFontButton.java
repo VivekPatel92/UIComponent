@@ -8,26 +8,26 @@ import android.util.Log;
 
 import vk.uicomponent.R;
 
-public class CustomFontTextView extends android.support.v7.widget.AppCompatTextView {
+public class CustomFontButton extends android.support.v7.widget.AppCompatButton {
     private static final String TAG = "TextView";
 
-    public CustomFontTextView(Context context) {
+    public CustomFontButton(Context context) {
         super(context);
     }
 
-    public CustomFontTextView(Context context, AttributeSet attrs) {
+    public CustomFontButton(Context context, AttributeSet attrs) {
         super(context, attrs);
         setCustomFont(context, attrs);
     }
 
-    public CustomFontTextView(Context context, AttributeSet attrs, int defStyle) {
+    public CustomFontButton(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setCustomFont(context, attrs);
     }
 
     private void setCustomFont(Context ctx, AttributeSet attrs) {
-        TypedArray a = ctx.obtainStyledAttributes(attrs, R.styleable.CustomFontTextView);
-        String customFont = a.getString(R.styleable.CustomFontTextView_fonts);
+        TypedArray a = ctx.obtainStyledAttributes(attrs, R.styleable.CustomFontButton);
+        String customFont = a.getString(R.styleable.CustomFontButton_fonts);
         setCustomFont(ctx, customFont);
         a.recycle();
     }
